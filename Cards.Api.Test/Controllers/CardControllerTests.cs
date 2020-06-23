@@ -2,7 +2,7 @@
 // Copyright (c) Staywell. All rights reserved.
 // </copyright>
 
-namespace Cards.Api.Test
+namespace Cards.Api.Controllers.Test
 {
     using System;
     using System.Collections.Generic;

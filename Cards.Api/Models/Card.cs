@@ -4,6 +4,7 @@
 
 namespace Cards.Api.Models
 {
+    using System;
     using System.ComponentModel.DataAnnotations.Schema;
 
     public enum Suit
@@ -44,7 +45,7 @@ namespace Cards.Api.Models
         {
             get
             {
-                return Suit.GetName(typeof(Suit), Suit);
+                return Enum.GetName(typeof(Suit), Suit);
             }
         }
 
@@ -53,7 +54,7 @@ namespace Cards.Api.Models
         {
             get
             {
-                return Value.GetName(typeof(Value), Value);
+                return Enum.GetName(typeof(Value), Value);
             }
         }
 
