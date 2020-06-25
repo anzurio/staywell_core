@@ -21,6 +21,6 @@ This repository contains a test project for dealing with playing cards.
 * Please fork this repository, create a feature branch, make the necessary modifications, and submit a pull request back to the original repository with your changes.
 * Your solution will be evaluated in the context of the pull request.
 
-### Who do I talk to? ###
+### Where do I send my Pull Request? ###
 
-* Send an email to your Intugo contact.  Please provide a link to your Pull Request.
+* Send a link to your Pull Request to your Intugo contact.
