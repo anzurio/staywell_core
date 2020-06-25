@@ -23,4 +23,4 @@ This repository contains a test project for dealing with playing cards.
 
 ### Who do I talk to? ###
 
-* Send an email to your Intugo contact.
+* Send an email to your Intugo contact.  Please provide a link to your Pull Request.
