@@ -15,6 +15,7 @@ This repository contains a test project for dealing with playing cards.
 ### The task: ###
 * As an API User, I would like to work with multiple decks of cards at a time.
 * Currently, this application is setup to work with only a single deck of cards.  We ask that you add a new endpoint to the API called /deck and provide the functionality needed to work with multiple decks of cards.
+* Add the ability to use multiple decks of 52 cards to make N x 52 cards.
 
 ### Contribution guidelines ###
 
