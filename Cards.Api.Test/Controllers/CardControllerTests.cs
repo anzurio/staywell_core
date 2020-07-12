@@ -4,32 +4,17 @@
 
 namespace Cards.Api.Controllers.Test
 {
-    using System;
     using System.Collections.Generic;
-    using Cards.Api.Controllers;
-    using Cards.Api.Data;
     using Cards.Api.Models;
-    using Cards.Api.Services;
-    using Microsoft.EntityFrameworkCore;
+    using Cards.Api.Test;
     using NUnit.Framework;
 
-    public class CardControllerTests
+    public class CardControllerTests : BaseContextTests
     {
         private CardController cardsController;
-        private DeckService deckService;
-        private CardsContext cardsContext;
 
-        [SetUp]
-        public void Setup()
+        protected override void AfterSetup()
         {
-            var rnd = new Random(DateTime.UtcNow.Millisecond);
-            this.cardsContext = new CardsContext(new DbContextOptionsBuilder<CardsContext>()
-                .UseInMemoryDatabase(databaseName: $"Cards_{rnd.Next()}")
-                .Options);
-
-            DataGenerator.Initialize(this.cardsContext);
-
-            this.deckService = new DeckService(cardsContext);
             this.cardsController = new CardController(this.deckService);
         }
 
