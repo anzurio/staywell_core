@@ -33,6 +33,7 @@ namespace Cards.Api
 
             services.AddControllers();
             services.AddTransient<DeckService>();
+            services.AddSwaggerDocument();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -65,6 +66,10 @@ namespace Cards.Api
             app.UseHttpsRedirection();
 
             app.UseRouting();
+
+            app.UseOpenApi();
+
+            app.UseSwaggerUi3();
 
             app.UseAuthorization();
 

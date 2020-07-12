@@ -1,0 +1,151 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Cards.Api</name>
+    </assembly>
+    <members>
+        <member name="M:Cards.Api.Controllers.CardController.Get">
+            <summary>
+            Gets a shuffled deck of cards.
+            </summary>
+            <returns>A shuffled deck of cards.</returns>
+        </member>
+        <member name="M:Cards.Api.Controllers.DeckController.Get(System.Int32)">
+            <summary>
+            Gets a shuffled collection of cards from <paramref name="count"/> decks.
+            </summary>
+            <param name="count">The numbers of decks to get.</param>
+            <returns>The collection of cards.</returns>
+        </member>
+        <member name="T:Cards.Api.Models.Suit">
+            <summary>
+            Suits of a 52 card deck.
+            </summary>
+        </member>
+        <member name="F:Cards.Api.Models.Suit.Spade">
+            <summary>
+            Represents the Spade suit.
+            </summary>
+        </member>
+        <member name="F:Cards.Api.Models.Suit.Heart">
+            <summary>
+            Represents the Heart suit.
+            </summary>
+        </member>
+        <member name="F:Cards.Api.Models.Suit.Club">
+            <summary>
+            Represents the Club suit.
+            </summary>
+        </member>
+        <member name="F:Cards.Api.Models.Suit.Diamond">
+            <summary>
+            Represents the Diamond suit.
+            </summary>
+        </member>
+        <member name="T:Cards.Api.Models.Value">
+            <summary>
+            Values or figures of a 52 card deck.
+            </summary>
+        </member>
+        <member name="F:Cards.Api.Models.Value.Two">
+            <summary>
+            Represents the value 2.
+            </summary>
+        </member>
+        <member name="F:Cards.Api.Models.Value.Three">
+            <summary>
+            Represents the value 3.
+            </summary>
+        </member>
+        <member name="F:Cards.Api.Models.Value.Four">
+            <summary>
+            Represents the value 4.
+            </summary>
+        </member>
+        <member name="F:Cards.Api.Models.Value.Five">
+            <summary>
+            Represents the value 5.
+            </summary>
+        </member>
+        <member name="F:Cards.Api.Models.Value.Six">
+            <summary>
+            Represents the value 6.
+            </summary>
+        </member>
+        <member name="F:Cards.Api.Models.Value.Seven">
+            <summary>
+            Represents the value 7.
+            </summary>
+        </member>
+        <member name="F:Cards.Api.Models.Value.Eight">
+            <summary>
+            Represents the value 8.
+            </summary>
+        </member>
+        <member name="F:Cards.Api.Models.Value.Nine">
+            <summary>
+            Represents the value 9.
+            </summary>
+        </member>
+        <member name="F:Cards.Api.Models.Value.Ten">
+            <summary>
+            Represents the value 10.
+            </summary>
+        </member>
+        <member name="F:Cards.Api.Models.Value.Jack">
+            <summary>
+            Represents a Jack.
+            </summary>
+        </member>
+        <member name="F:Cards.Api.Models.Value.Queen">
+            <summary>
+            Represents a Queen.
+            </summary>
+        </member>
+        <member name="F:Cards.Api.Models.Value.King">
+            <summary>
+            Represents a King.
+            </summary>
+        </member>
+        <member name="F:Cards.Api.Models.Value.Ace">
+            <summary>
+            Represents the Ace.
+            </summary>
+        </member>
+        <member name="T:Cards.Api.Models.Card">
+            <summary>
+            Represents a card from 52 card deck.
+            </summary>
+        </member>
+        <member name="P:Cards.Api.Models.Card.Id">
+            <summary>
+            An uniquely identifying number for this card.
+            </summary>
+        </member>
+        <member name="P:Cards.Api.Models.Card.Suit">
+            <summary>
+            The suit of the card.
+            </summary>
+        </member>
+        <member name="P:Cards.Api.Models.Card.Value">
+            <summary>
+            The value of the card.
+            </summary>
+        </member>
+        <member name="P:Cards.Api.Models.Card.SuitName">
+            <summary>
+            This card's suit name.
+            </summary>
+        </member>
+        <member name="P:Cards.Api.Models.Card.ValueName">
+            <summary>
+            This card's value as a string.
+            </summary>
+        </member>
+        <member name="P:Cards.Api.Models.Card.CardName">
+            <summary>
+            The complete name of this card composed by its value and its suit.
+            </summary>
+        </member>
+    </members>
+</doc>

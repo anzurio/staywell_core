@@ -10,6 +10,7 @@ namespace Cards.Api.Controllers
     using Cards.Api.Data;
     using Cards.Api.Models;
     using Cards.Api.Services;
+    using Microsoft.AspNetCore.Http;
     using Microsoft.AspNetCore.Mvc;
 
     [ApiController]
@@ -23,7 +24,13 @@ namespace Cards.Api.Controllers
             service = deckService;
         }
 
+        
+        /// <summary>
+        /// Gets a shuffled deck of cards.
+        /// </summary>
+        /// <returns>A shuffled deck of cards.</returns>
         [HttpGet]
+        [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(List<Card>))]
         public List<Card> Get()
         {
             return service.GetCards(1).ToList();

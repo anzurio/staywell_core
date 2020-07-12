@@ -5,7 +5,12 @@ VisualStudioVersion = 16.0.29728.190
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cards.Api", "Cards.Api\Cards.Api.csproj", "{2FD84FCE-DE7F-4640-B6BF-86D2BA59F659}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cards.Api.Test", "Cards.Api.Test\Cards.Api.Test.csproj", "{DC52C458-0179-4915-BE0E-1789B9599679}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cards.Api.Test", "Cards.Api.Test\Cards.Api.Test.csproj", "{DC52C458-0179-4915-BE0E-1789B9599679}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{BB5F186F-45C2-4B1F-BE1D-64AF98B0EBB8}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
