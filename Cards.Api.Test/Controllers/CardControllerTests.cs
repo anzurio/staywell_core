@@ -9,12 +9,14 @@ namespace Cards.Api.Controllers.Test
     using Cards.Api.Controllers;
     using Cards.Api.Data;
     using Cards.Api.Models;
+    using Cards.Api.Services;
     using Microsoft.EntityFrameworkCore;
     using NUnit.Framework;
 
     public class CardControllerTests
     {
         private CardController cardsController;
+        private DeckService deckService;
         private CardsContext cardsContext;
 
         [SetUp]
@@ -27,7 +29,8 @@ namespace Cards.Api.Controllers.Test
 
             DataGenerator.Initialize(this.cardsContext);
 
-            this.cardsController = new CardController(cardsContext);
+            this.deckService = new DeckService(cardsContext);
+            this.cardsController = new CardController(this.deckService);
         }
 
         [Test]

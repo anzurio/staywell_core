@@ -9,43 +9,24 @@ namespace Cards.Api.Controllers
     using System.Linq;
     using Cards.Api.Data;
     using Cards.Api.Models;
+    using Cards.Api.Services;
     using Microsoft.AspNetCore.Mvc;
 
     [ApiController]
     [Route("[controller]")]
     public class CardController : ControllerBase
     {
-        private readonly CardsContext cardsContext;
-        private static Random rng = new Random(0);
+        private readonly DeckService service;
 
-        public CardController(CardsContext context)
+        public CardController(DeckService deckService)
         {
-            cardsContext = context;
+            service = deckService;
         }
 
         [HttpGet]
         public List<Card> Get()
         {
-            rng = new Random(0);
-
-            IList<Card> deck = cardsContext.Cards.ToList();
-
-            return Shuffle(deck).ToList();
-        }
-
-        private static IList<Card> Shuffle(IList<Card> list)
-        {
-            int n = list.Count;
-            while (n > 1)
-            {
-                n--;
-                int k = rng.Next(n + 1);
-                Card value = list[k];
-                list[k] = list[n];
-                list[n] = value;
-            }
-
-            return list;
+            return service.GetCards(1).ToList();
         }
     }
 }

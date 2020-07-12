@@ -5,6 +5,7 @@
 namespace Cards.Api
 {
     using Cards.Api.Data;
+    using Cards.Api.Services;
     using Microsoft.AspNetCore.Builder;
     using Microsoft.AspNetCore.Hosting;
     using Microsoft.EntityFrameworkCore;
@@ -28,6 +29,7 @@ namespace Cards.Api
                 options.UseInMemoryDatabase("Cards"));
 
             services.AddControllers();
+            services.AddTransient<DeckService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
