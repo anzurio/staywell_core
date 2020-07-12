@@ -1,5 +1,6 @@
 ﻿namespace Cards.Api.Controllers
 {
+    using System;
     using System.Collections.Generic;
     using System.Linq;
     using Cards.Api.Models;
@@ -19,6 +20,10 @@
         [HttpGet]
         public List<Card> Get(int count)
         {
+            if (count < 0)
+            {
+                throw new ArgumentException($"{nameof(count)} must be greater or equal to zero.");
+            }
             return service.GetCards(count).ToList();
         }
     }
